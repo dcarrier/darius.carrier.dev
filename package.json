@@ -1,11 +1,13 @@
 {
-    "name": "dante-astro-theme",
+    "name": "darius.carrier.dev",
     "type": "module",
     "version": "0.0.1",
     "scripts": {
-        "dev": "astro dev",
+        "rust": "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && . \"$HOME/.cargo/env\" && rustup toolchain install nightly --profile minimal && rustup default nightly && rustup target add wasm32-unknown-unknown && cargo install --locked wasm-pack",
+        "wasm": ". \"$HOME/.cargo/env\" && cd src/wasm-rs && make build && cd -",
+        "dev": "npm run wasm && astro dev",
         "start": "astro dev",
-        "build": "astro build",
+        "build": "npm run rust && npm run wasm && astro build",
         "preview": "astro preview",
         "astro": "astro"
     },
@@ -14,13 +16,17 @@
         "@astrojs/rss": "^4.0.6",
         "@astrojs/sitemap": "^3.1.5",
         "@astrojs/tailwind": "^5.1.0",
+        "@xterm/xterm": "^5.5.0",
         "astro": "^4.9.1",
         "marked": "^12.0.2",
+        "prettier-plugin-astro": "^0.14.0",
         "tailwindcss": "^3.4.3"
     },
     "devDependencies": {
         "@tailwindcss/typography": "^0.5.13",
-        "prettier": "^3.2.5",
-        "prettier-plugin-tailwindcss": "^0.6.0"
+        "prettier": "^3.3.1",
+        "prettier-plugin-tailwindcss": "^0.6.0",
+        "vite": "^5.2.13",
+        "vite-plugin-wasm-pack": "^0.1.12"
     }
 }

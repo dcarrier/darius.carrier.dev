@@ -2,6 +2,8 @@
 import { marked } from 'marked';
 import Button from './Button.astro';
 import siteConfig from '../data/site-config';
+import { Image } from 'astro:assets';
+import heroImage from '../../public/hero.jpg';
 
 const hero = siteConfig.hero;
 ---
@@ -12,8 +14,8 @@ const hero = siteConfig.hero;
             {hero.title && <h1 class="text-3xl leading-tight font-serif font-medium sm:text-5xl sm:leading-tight">{hero.title}</h1>}
             {hero.image?.src && (
                 <figure>
-                    <img class="w-full" src={hero.image.src} loading="lazy" decoding="async" alt={hero.image.alt || ''} />
-                    {hero.image.caption && <figcaption class="mt-1.5 text-xs sm:text-sm">{hero.image.caption}</figcaption>}
+                    <Image class="block mx-auto w-3/5" src={heroImage} loading="eager" decoding="async" alt={hero.image.alt || ''} />
+                    {hero.image.caption && <figcaption class="mt-1.5 italic text-xs text-center sm:text-sm">{hero.image.caption}</figcaption>}
                 </figure>
             )}
             {hero.text && <div class="max-w-none prose prose-dante sm:prose-lg" set:html={marked.parse(hero.text)} />}

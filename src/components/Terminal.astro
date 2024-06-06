@@ -1,0 +1,13 @@
+---
+
+---
+
+<section class="w-full h-full flex flex-col gap-8 mb-16 sm:mb-24">
+    <div id="terminal"></div>
+    <script>
+        // https://github.com/nshen/vite-plugin-wasm-pack
+        import init from '../wasm-rs/pkg/';
+        console.log('Starting WASM xTerm');
+        init();
+    </script>
+</section>
