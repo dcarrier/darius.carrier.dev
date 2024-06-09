@@ -1,4 +1,4 @@
-# darius-carrier-dev
+# darius.carrier.dev
 
 Repository for https://darius.carrier.dev hosted on Cloudflare Pages.
 
