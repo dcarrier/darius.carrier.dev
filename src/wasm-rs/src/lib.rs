@@ -120,7 +120,7 @@ fn intro(term: &Terminal) {
 
 fn about(term: &Terminal) {
     const GREETING: &str =
-        "Hello, I am \x1b[1;33mDarius Carrier\x1b[0m, a Software Site Reliability Engineer. Please use the terminal below to learn about me!";
+        "Hello, I am \x1b[1;33mDarius Carrier\x1b[0m, a Software Engineer. Please use the terminal below to learn about me!";
     term.writeln(GREETING);
     term.writeln("");
     term.writeln("");
