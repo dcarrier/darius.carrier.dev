@@ -129,8 +129,9 @@ fn about(term: &Terminal) {
 
 fn contact(term: &Terminal) {
     term.writeln("");
-    term.writeln("https://github.com/dcarrier");
-    term.writeln("https://linkedin.com/in/ddcarrier");
+    term.writeln("📩  darius@carrier.dev");
+    term.writeln("🔗  https://github.com/dcarrier");
+    term.writeln("🔗  https://linkedin.com/in/ddcarrier");
 }
 
 fn experience(term: &Terminal) {
@@ -141,7 +142,7 @@ fn experience(term: &Terminal) {
 }
 
 fn help(term: &Terminal) {
-    term.writeln("commands: about, clear, contact, experience, help");
+    term.writeln("commands: clear, contact, experience, help");
 }
 
 fn prompt(term: &Terminal) {
