@@ -3,7 +3,7 @@
     "type": "module",
     "version": "0.0.1",
     "scripts": {
-        "rust": "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && . \"$HOME/.cargo/env\" && rustup toolchain install nightly --profile minimal && rustup default nightly && rustup target add wasm32-unknown-unknown && cargo install --locked wasm-pack",
+        "rust": "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && . \"$HOME/.cargo/env\" && rustup toolchain install nightly --profile minimal && rustup default nightly &&[...]
         "wasm": ". \"$HOME/.cargo/env\" && cd src/wasm-rs && make build && cd -",
         "dev": "npm run wasm && astro dev",
         "start": "astro dev",
@@ -12,7 +12,7 @@
         "astro": "astro"
     },
     "dependencies": {
-        "@astrojs/mdx": "^4.3.9",
+        "@astrojs/mdx": "^5.0.4",
         "@astrojs/rss": "^4.0.15",
         "@astrojs/sitemap": "^3.1.5",
         "@astrojs/tailwind": "^5.1.5",
